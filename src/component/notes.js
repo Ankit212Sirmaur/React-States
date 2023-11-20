@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import NotesProp from './notesProp';
 
 function Notes() {
   const [notes, setNotes] = useState([]);
@@ -16,13 +17,13 @@ function Notes() {
   }
   return (
     <>
-      <input onChange={updateCurrentNote} type="text" />
+      <input onChange={updateCurrentNote} type="text"/>
       <button onClick={addNote}>submit</button>
       <ul>
         {notes.map((note, idx) => {
           return (
             <li key={idx}>
-              {note}
+              <NotesProp note = {note}/>
             </li>
           )
         })}
