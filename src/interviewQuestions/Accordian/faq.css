@@ -1,0 +1,44 @@
+
+.faq-box {
+    background-color: gray;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 1200px;
+    text-align: left;
+  }
+  .que {
+    display: flex;
+    cursor: pointer;
+    justify-content: left;
+    align-self: center;
+    font-size: 30px;
+    color: aquamarine;
+    font-weight: bold;
+    padding: auto;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
+  .ans {
+    color: aquamarine;
+    font-weight: 500;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+  button {
+    height: 40px;
+    width: 40px;
+    background-color: gray;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: purple;
+    transition: transform 0.1s;
+  }
+  button.rotate {
+    transform: rotate(90deg);
+  }
+  

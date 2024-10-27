@@ -1,0 +1,41 @@
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-box > input{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    padding: 5px; 
+    outline: none;
+    border:none;
+    text-align: center;
+}
+.start-btn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: purple;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.timer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+.action-btn button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: purple;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;   
+}

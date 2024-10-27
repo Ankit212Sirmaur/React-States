@@ -1,0 +1,66 @@
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f8f9;
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.input-name {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%; /* Make input containers full width */
+    max-width: 300px; /* Limit maximum width */
+}
+
+.input-name label {
+    display: block; /* Ensure label takes full width */
+    margin: 10px 0; 
+    font-weight: bold;
+}
+
+.input-name input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; 
+}
+
+.btn {
+    border: none;
+    font-size: small;
+    background-color: transparent;
+    text-decoration: underline;
+    margin-bottom: 10px; 
+    transition: color 0.3s;
+    display: block;
+}
+
+.btn:hover {
+    color: darkcyan;
+}
+
+.next-btn {
+    border: none;
+    border-radius: 8px;
+    font-size: medium;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: darkcyan;
+}
+.next-btn:hover {
+    color: rgb(6, 70, 70);
+}

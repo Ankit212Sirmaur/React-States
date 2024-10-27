@@ -1,12 +1,18 @@
-// import Counter from "./component/counter";
-// import Fruit from "./component/fruit";
-import Notes from "./component/notes";
+import './App.css'
+import Faq from './interviewQuestions/Accordian/Faq';
+import TimerChallenge from './interviewQuestions/CountDownTimer/TimerChallenge';
+import ModalOverlay from './interviewQuestions/ModalApp/ModalOverlay';
+import MultiStepForm from './interviewQuestions/multi-step-form/MultiStepForm';
+import Web from './interviewQuestions/someCss/Web';
 function App() {
+
   return (
     <div className="App">
-      {/* <Counter/> */}
-      {/* <Fruit/> */}
-      <Notes/>
+      {/* <TimerChallenge/> */}
+      {/* <Faq/> */}
+      {/* <ModalOverlay/> */}
+      {/* <Web/> */}
+      <MultiStepForm/>
     </div>
   );
 }
