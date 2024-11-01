@@ -1,46 +1,46 @@
 import React, { useState } from "react";
 
 const DiwaliGifts = () => {
-    const [newEmployee, setNewEmployee] = useState("");
-    const [allEmployees, setAllEmployees] = useState([]);
+    const [name, setname] = useState("");
+    const [employeeList, setemployeeList] = useState([]);
     const [assign, setAssign] = useState(false);
 
     const gifts = ["smart-watch", "headphone", "sweets"];
 
-    const handleNewEmployee = (event) => {
-        setNewEmployee(event.target.value);
+    const handleName = (event) => {
+        setname(event.target.value);
     }
 
     const handleButton = () => {
-        if (newEmployee.trim()) {
-            setAllEmployees([...allEmployees, { name: newEmployee, gifts: 'no assigned gifts' }]);
-            setNewEmployee("");
+        if (name.trim()) {
+            setemployeeList([...employeeList, { name: name, gifts: 'no assigned gifts' }]);
+            setname("");
         }
     }
     const AssingGifts = () => {
         if(!assign) {
-            const assignedGifts = allEmployees.map((emp) => ({
+            const assignedGifts = employeeList.map((emp) => ({
                 ...emp,
                 gifts: gifts[Math.floor(Math.random() * gifts.length)]
             }));
-            setAllEmployees(assignedGifts);
+            setemployeeList(assignedGifts);
             setAssign(true);
         }
     }
     const ShuffleGifts =() => {
-        const assignedGifts = allEmployees.map((emp, index) => ({
+        const assignedGifts = employeeList.map((emp, index) => ({
             ...emp,
             gifts: gifts[Math.floor(Math.random() * gifts.length)]
         }));
-        setAllEmployees(assignedGifts);
+        setemployeeList(assignedGifts);
     }
 
     const ResetGifts = () => {
-        const assignedGifts = allEmployees.map((emp, index) => ({
+        const assignedGifts = employeeList.map((emp, index) => ({
             ...emp,
             gifts: 'no gift assign'
         }));
-        setAllEmployees(assignedGifts);
+        setemployeeList(assignedGifts);
     }
     return (
         <div className="p-4">
@@ -48,8 +48,8 @@ const DiwaliGifts = () => {
                 <input 
                     type="text" 
                     placeholder="Name of the employee" 
-                    value={newEmployee} 
-                    onChange={handleNewEmployee}
+                    value={name} 
+                    onChange={handleName}
                     className="border p-2 mr-2"
                 />
                 <button 
@@ -78,7 +78,7 @@ const DiwaliGifts = () => {
                 </button>
             </div>
             <ul className="list-disc pl-6">
-                {allEmployees.map((emp, index) => (
+                {employeeList.map((emp, index) => (
                     <li key={index}>
                         {emp.name} - {emp.gifts}
                     </li>

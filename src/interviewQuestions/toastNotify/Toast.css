@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 5rem;
+}
+
+.toast {
+    position: relative;
+    background-color: beige;
+    border-radius: 0.5rem;
+    width: 12rem;
+    padding: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    animation: slides 1s, 1;
+    margin-top: 1rem;
+}
+span{
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+}
+
+.sucess {
+    background-color: greenyellow;
+}
+.warning {
+    background-color: yellow;
+}
+.info {
+    background-color: blueviolet;
+}
+.error {
+    background-color: red;
+}
+
+@keyframes slides{
+    0% {
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}

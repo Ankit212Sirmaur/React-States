@@ -1,0 +1,75 @@
+.Auto-Suggest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-box input {
+    width: 220px;
+    height: 40px;
+    padding: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Auto-suggest-list {
+    border: none;
+    height: 200px;
+    width: 220px;
+    overflow-y: auto;
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.product {
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.product:hover {
+    background-color: rgb(184, 180, 180);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.bucket-list {
+    display: flex;
+    margin-top:   10px;
+    background-color: aliceblue;
+    width: 220px;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button{
+    background-color:lightseagreen ;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+
+.bucket-list button:hover {
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: aquamarine;
+}
+
