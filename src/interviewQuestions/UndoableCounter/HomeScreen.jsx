@@ -20,33 +20,30 @@ const HomeScreen = () => {
 			prev,
 			curr,
 		};
-		const copyHistory = [...history];
-		copyHistory.unshift(obj);
-		setHistory(copyHistory);
+		setHistory((prev) => [obj, ...prev]);
 	};
 	const handleUndo = () => {
 		if (history.length) {
-			const copyHistory = [...history];
-			const removeFirstItem = copyHistory.shift();
+			const [removeFirstItem, ...copyHistory] = history;
+			// rest operator 
 			setHistory(copyHistory);
-
 			setValue(removeFirstItem.prev);
-
-			const copyRedo = [...redo];
-			copyRedo.push(removeFirstItem);
-			setRedo(copyRedo);
+			setRedo(prevRedo => [...prevRedo, removeFirstItem]);
 		}
 	};
+	/**
+	 * const { name, age, ...rest } = props; // rest operator
+	 * setState(prevState => ({ ...prevState, key: value })); //
+	 */
 	const handleRedo = () => {
 		if (redo.length) {
-			const copyRedoList = [...redo];
-			const poppedValue = copyRedoList.pop();
-			setRedo(copyRedoList);
-			const { action, prev, curr } = poppedValue;
-			setValue(curr);
-			maintainHistory(action, prev, curr);
+		  const { action, prev, curr } = redo.pop();  // Directly pop the last item
+		  setRedo([...redo]);  // Trigger a state update with a shallow copy
+		  setValue(curr);  // Set the new value
+		  maintainHistory(action, prev, curr);  // Maintain history
 		}
-	};
+	  };
+	  
 	return (
 		<div className="app">
 			<div className="Home-Screen">

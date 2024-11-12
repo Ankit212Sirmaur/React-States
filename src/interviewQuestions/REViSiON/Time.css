@@ -1,0 +1,38 @@
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    height: 90vh;
+    flex-direction: row;
+    /* width: 60vb; */
+}
+.input-container button {
+    background-color: blueviolet;
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+    border: none;
+}
+input {
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+input:hover {
+    background-color: aliceblue;
+}
+
+.timer-container {
+   
+}
+.show-time {
+    background-color: blanchedalmond;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

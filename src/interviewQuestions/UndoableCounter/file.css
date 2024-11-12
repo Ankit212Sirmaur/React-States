@@ -55,3 +55,9 @@
     background-color: rgb(219, 201, 219);
     text-align: center;
 }
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}

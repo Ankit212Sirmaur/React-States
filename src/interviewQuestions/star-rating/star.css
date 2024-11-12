@@ -1,0 +1,35 @@
+.main-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    font-size: 50px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.star {
+    font-size: 50px;
+    color: gray;
+}
+
+.on {
+    color: gold;
+}
+
+.off {
+    color: gray;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 20px;
+}

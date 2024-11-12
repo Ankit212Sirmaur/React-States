@@ -10,10 +10,7 @@ const ToastContainer = () => {
             clearTimeout(timeoutIds[id]);
             delete timeoutIds[id];
         }
-		setToasts((toasts) => {
-			const newtoast = toasts.filter((item) => item.id !== id);
-			return newtoast;
-		});
+		setToasts((toasts) =>  toasts.filter((item) => item.id !== id));
 	};
 
 	const handleToast = (msg, type) => {
@@ -21,9 +18,13 @@ const ToastContainer = () => {
 		const newToast = [...toasts, { id, msg, type }];
 		setToasts(newToast);
 		const timeoutId = setTimeout(() => handleClose(id), 5000);
-
+		console.log('timeoutId', timeoutId);
 		setTimeoutIds((prevIds) => ({ ...prevIds, [id]: timeoutId }));
 	};
+
+	setTimeout(() => {
+		console.log(timeoutIds);
+	}, 7000)
 
 	return (
 		<div className="container">

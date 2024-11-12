@@ -79,10 +79,10 @@ const TimerChallenge = () => {
   }
 
   return (
-    <div>
-      <h2>CountDown timer</h2>
+    <div className="input-container">
       {!start && (
-        <div className="input-container">
+        <div>
+          <h2>CountDown timer</h2>
           <div className="input-box">
             <input type="text" id="hrs" placeholder="hrs" onChange={handleInputChange} />
             <input type="text" id="min" placeholder="min" onChange={handleInputChange} />

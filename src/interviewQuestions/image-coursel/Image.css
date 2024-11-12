@@ -1,0 +1,56 @@
+/* Image container with flexbox */
+.image-container {
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* 90% of the viewport height */
+    position: relative;
+    /* width: 100%; Ensure it fills the available width */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+/* Styling for the action buttons container */
+.action-button {
+    position: absolute;
+    top: 50%; /* Vertically center the buttons */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Allow buttons to span across the container */
+}
+
+/* Left button */
+.action-button #left {
+    left: 10px;
+    font-size: 2rem; /* Bigger button size */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background with opacity */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Right button */
+.action-button #right {
+    right: 10px;
+    font-size: 2rem; /* Bigger button size */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background with opacity */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+.action-button button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    cursor: pointer;
+}
+
+/* Styling for the image itself */
+.image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image takes up the full height */
+    object-fit: cover; /* Make sure the image covers the container without stretching */
+}

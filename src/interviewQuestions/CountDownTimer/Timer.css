@@ -1,7 +1,8 @@
-.input-box {
+.input-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .input-box > input{
     width: 30px;
@@ -11,6 +12,7 @@
     outline: none;
     border:none;
     text-align: center;
+    background-color: bisque;
 }
 .start-btn {
     width: 100px;
